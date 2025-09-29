@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Minha Gatinha Linda 💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffe6f7 0%, #f9c6e0 100%);
+            font-family: 'Pacifico', cursive, Arial, sans-serif;
+            color: #d72660;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.9);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(217,38,96,0.15);
+            padding: 32px 24px 24px 24px;
+            text-align: center;
+        }
+        .cute-img {
+            width: 120px;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px #f9c6e0;
+            margin: 10px auto 20px auto;
+            display: block;
+            transition: transform 0.4s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s;
+        }
+        .cute-img:hover {
+            transform: scale(1.12) rotate(-6deg);
+            box-shadow: 0 0 32px #ff69b4;
+        }
+        .heart-anim {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            font-size: 2em;
+            animation: floatUp 1.2s ease-out forwards;
+        }
+        @keyframes floatUp {
+            0% { opacity: 1; transform: translateY(0) scale(1); }
+            80% { opacity: 0.8; transform: translateY(-80px) scale(1.2); }
+            100% { opacity: 0; transform: translateY(-120px) scale(0.8); }
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+        }
+        .heart {
+            color: #ff69b4;
+            font-size: 2em;
+            animation: pulse 1s infinite alternate;
+        }
+        @keyframes pulse {
+            to { transform: scale(1.2); }
+        }
+        .btn {
+            background: #ff69b4;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 12px 32px;
+            font-size: 1.2em;
+            margin-top: 24px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background: #d72660;
+        }
+        .message {
+            display: none;
+            margin-top: 24px;
+            font-size: 1.3em;
+            color: #d72660;
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Música de fundo: Happy Happy Happy Cat Meme -->
+    <audio id="bgMusic" src="https://files.catbox.moe/6q2r1r.mp3" autoplay loop hidden></audio>
+    <div class="container">
+        <div id="step1" class="step">
+            <button class="btn" id="startBtn">CLIQUE AQUI</button>
+        </div>
+        <div id="step2" class="step" style="display:none;">
+            <h1>Oi meu amor, minha gatinha, minha vida, meu tudo!</h1>
+            <img class="cute-img" src="https://i.pinimg.com/736x/24/6f/f7/246ff718a9c530d4b7e6d642fe516202.jpg" alt="Gatinho fofo 1">
+            <img class="cute-img" src="https://i.pinimg.com/736x/d0/cc/67/d0cc67668b8b54489f68280231135139.jpg" alt="Gatinho fofo 2">
+            <img class="cute-img" src="https://i.pinimg.com/736x/e7/32/fa/e732fa8f458e06651cf56c5d4237e2a2.jpg" alt="Gatinho fofo 3">
+            <button class="btn" id="toStep3">Clique aqui</button>
+        </div>
+        <div id="step3" class="step" style="display:none;">
+            <h2>Tudo começou quando eu estava sozinho, sem ninguém...</h2>
+            <p>Então, por um plano do destino, eu te encontrei, meu amor.<br>
+            Estávamos no aplicativo de namoro, nós dois, mas diante de todo o cenário de improváveis acontecimentos, nós nos conhecemos.<br>
+            Isso não foi acaso, foi Deus. Ele planejou você pra mim.</p>
+            <img class="cute-img" src="https://i.pinimg.com/736x/39/97/62/3997626eff3408deeaf08e95add258fb.jpg" alt="Gatinho carinhoso 1">
+            <img class="cute-img" src="https://i.pinimg.com/736x/df/73/e3/df73e305fe485d09902e8321f060cc93.jpg" alt="Gatinho carinhoso 2">
+            <img class="cute-img" src="https://i.pinimg.com/736x/e7/32/fa/e732fa8f458e06651cf56c5d4237e2a2.jpg" alt="Gatinho carinhoso 3">
+            <button class="btn" id="toStep4">Clique aqui</button>
+        </div>
+        <div id="step4" class="step" style="display:none;">
+            <h2>Eu sempre vou te amar, minha gatinha!</h2>
+            <p>Seus problemas e dificuldades não te tornam feia ou pior.<br>
+            Na verdade, só mostram o quanto você é linda, batalhadora e continua caminhando mesmo assim, apesar de tudo.<br>
+            Te amo, meu amor!</p>
+            <img class="cute-img" src="https://i.pinimg.com/736x/24/6f/f7/246ff718a9c530d4b7e6d642fe516202.jpg" alt="Gatinho carinhoso 1">
+            <img class="cute-img" src="https://i.pinimg.com/736x/d0/cc/67/d0cc67668b8b54489f68280231135139.jpg" alt="Gatinho carinhoso 2">
+            <img class="cute-img" src="https://i.pinimg.com/736x/e7/32/fa/e732fa8f458e06651cf56c5d4237e2a2.jpg" alt="Gatinho carinhoso 3">
+            <span style="font-size:2em;">😻🌸✨</span>
+        </div>
+    </div>
+    <script>
+        // Sequência de telas interativas
+        document.getElementById('startBtn').onclick = function(e) {
+            document.getElementById('step1').style.display = 'none';
+            document.getElementById('step2').style.display = 'block';
+            heartBurst(e);
+        };
+        document.getElementById('toStep3').onclick = function(e) {
+            document.getElementById('step2').style.display = 'none';
+            document.getElementById('step3').style.display = 'block';
+            heartBurst(e);
+        };
+        document.getElementById('toStep4').onclick = function(e) {
+            document.getElementById('step3').style.display = 'none';
+            document.getElementById('step4').style.display = 'block';
+            heartBurst(e);
+        };
+
+        // Efeito de corações animados ao clicar
+        function heartBurst(event) {
+            for (let i = 0; i < 8; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.className = 'heart-anim';
+                    heart.innerText = ['💖','💗','💞','💕','💓','💝'][Math.floor(Math.random()*6)];
+                    document.body.appendChild(heart);
+                    const x = event.clientX + (Math.random()-0.5)*80;
+                    const y = event.clientY + (Math.random()-0.5)*40;
+                    heart.style.left = x + 'px';
+                    heart.style.top = y + 'px';
+                    setTimeout(() => heart.remove(), 1200);
+                }, i*80);
+            }
+        }
+
+        // Efeito de balançar imagens ao passar o mouse
+        document.querySelectorAll('.cute-img').forEach(img => {
+            img.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.15) rotate(-8deg)';
+                this.style.boxShadow = '0 0 32px #ff69b4';
+            });
+            img.addEventListener('mouseleave', function() {
+                this.style.transform = '';
+                this.style.boxShadow = '';
+            });
+        });
+    </script>
+</body>
+</html>
